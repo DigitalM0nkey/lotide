@@ -8,12 +8,23 @@ const assertEqual = function (actual, expected) {
 };
 
 const eqArrays = (actArr, expArr) => {
-  return assertEqual(JSON.stringify(actArr), JSON.stringify(expArr));
+  if (JSON.stringify(actArr) === JSON.stringify(expArr)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
+console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+
+
+// eqArrays([1, 2, 3], [1, 2, 3]) // => true
+// eqArrays([1, 2, 3], [3, 2, 1]) // => false
+
+// eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
+// eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
