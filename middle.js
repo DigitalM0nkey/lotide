@@ -1,18 +1,21 @@
-
 const eqArrays = (actArr, expArr) => {
-  return assertEqual(JSON.stringify(actArr), JSON.stringify(expArr));
+  if (JSON.stringify(actArr) === JSON.stringify(expArr)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+const assertEqualArrays = function (actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected} ✅`);
   } else {
     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected} ❗️❗️❗️`);
   }
 };
 
-const middle = function(array) {
+const middle = function (array) {
   let output = [];
   if (array.length <= 2) {
     output = [];
@@ -25,8 +28,11 @@ const middle = function(array) {
   return output;
 };
 
-eqArrays(middle([1, 2, 3, 5, 4]), [3]);
-eqArrays(middle([1, 2,]), []);
-eqArrays(middle([1, 3, 4]), [3]);
-eqArrays(middle([1, 2, 3, 4]), [2, 3]);
-eqArrays(middle([1, 2, 3, 5, 4, 5]), [3, 5]);
+
+
+
+assertEqualArrays(middle([1, 2, 3, 5, 4]), [3]);
+assertEqualArrays(middle([1, 2,]), []);
+assertEqualArrays(middle([1, 3, 4]), [3]);
+assertEqualArrays(middle([1, 2, 3, 4]), [2, 3]);
+assertEqualArrays(middle([1, 2, 3, 5, 4, 5]), [3, 5]);

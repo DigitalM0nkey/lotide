@@ -1,16 +1,20 @@
-
 const eqArrays = (actArr, expArr) => {
-  return assertEqual(JSON.stringify(actArr), JSON.stringify(expArr));
+  if (JSON.stringify(actArr) === JSON.stringify(expArr)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
+const assertEqualArrays = function (actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected} ✅`);
   } else {
     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected} ❗️❗️❗️`);
   }
 };
+
 
 const flatten = (input) => {
   let newArray = [];
@@ -29,4 +33,4 @@ const flatten = (input) => {
   return newArray;
 };
 
-eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+assertEqualArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
