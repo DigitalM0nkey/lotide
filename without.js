@@ -7,7 +7,7 @@ const eqArrays = (actArr, expArr) => {
 };
 
 
-const assertEqualArrays = function (actual, expected) {
+const assertEqualArrays = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected} ✅`);
   } else {
@@ -19,7 +19,7 @@ const assertEqualArrays = function (actual, expected) {
 const without = (origArray, itemToRemove) => {
   let newArray;
   itemToRemove.forEach(item => {
-    newArray = origArray.filter(function (numbers) {
+    newArray = origArray.filter(function(numbers) {
       return numbers !== item;
     });
   });
@@ -40,3 +40,4 @@ assertEqualArrays(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["h
 const words = ["hello", "world", "lighthouse"];
 without(["hello", "world", "lighthouse"], ["lighthouse"]);
 assertEqualArrays(words, ["hello", "world", "lighthouse"]);
+module.exports = without;

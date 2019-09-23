@@ -140,3 +140,5 @@ assertEqualArrays(results3, ['',
   'made',
   '',
   'part']);
+
+module.exports = map;
