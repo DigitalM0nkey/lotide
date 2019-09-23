@@ -21,10 +21,10 @@ const countLetters = (words) => {
   return output;
 };
 
-let countedLetters = countLetters("lighthouse in the house");
+// let countedLetters = countLetters("lighthouse in the house");
 
-assertEqual(countedLetters["t"], 2);
-assertEqual(countedLetters["g"], 1);
-assertEqual(countedLetters["e"], 3);
+// assertEqual(countedLetters["t"], 2);
+// assertEqual(countedLetters["g"], 1);
+// assertEqual(countedLetters["e"], 3);
 
 module.exports = countLetters;

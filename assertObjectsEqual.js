@@ -36,5 +36,5 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }); // => true
-assertObjectsEqual({ 1: 1, 2: 2, 5: 3 }, { 1: 1, 2: 2, 3: 3 }); // => false
+// assertObjectsEqual({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }); // => true
+// assertObjectsEqual({ 1: 1, 2: 2, 5: 3 }, { 1: 1, 2: 2, 3: 3 }); // => false

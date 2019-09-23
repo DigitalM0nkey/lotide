@@ -6,7 +6,6 @@ const eqArrays = (actArr, expArr) => {
   }
 };
 
-
 const assertEqualArrays = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected} ✅`);
@@ -14,7 +13,6 @@ const assertEqualArrays = function(actual, expected) {
     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected} ❗️❗️❗️`);
   }
 };
-
 
 const flatten = (input) => {
   let newArray = [];
@@ -33,6 +31,6 @@ const flatten = (input) => {
   return newArray;
 };
 
-assertEqualArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+//assertEqualArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 
 module.exports = flatten;

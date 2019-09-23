@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@digitalm0nkey/lotide",
   "version": "1.0.0",
-  "description": "lotide directory",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library. **_BEWARE:_ This library was published for learning purposes.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
