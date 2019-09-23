@@ -1,0 +1,31 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "lotide directory",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitalM0nkey/lotide.git"
+  },
+  "keywords": [
+    "lotide"
+  ],
+  "author": "Terrence Kuiper <@DigitalM0nkey>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalM0nkey/lotide/issues"
+  },
+  "homepage": "https://github.com/DigitalM0nkey/lotide#readme"
+}
